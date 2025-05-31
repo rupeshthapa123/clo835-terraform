@@ -70,6 +70,8 @@ resource "aws_instance" "webapp_host" {
   vpc_security_group_ids      = [aws_security_group.clo835_sg.id]
   associate_public_ip_address = true
   key_name                    = aws_key_pair.my_key.key_name
+  
+  iam_instance_profile =  "LabInstanceProfile"
 
   tags = {
     Name = "clo835-webapp-host"
