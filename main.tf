@@ -45,7 +45,7 @@ resource "aws_security_group" "clo835_sg" {
 
   # Allow 8081, 8082, 8083
   dynamic "ingress" {
-    for_each = [8081, 8082, 8083]
+    for_each = [8080, 8081, 8082, 8083]
     content {
       from_port   = ingress.value
       to_port     = ingress.value
